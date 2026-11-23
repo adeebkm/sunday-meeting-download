@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunday Meeting</title>
+<meta name="description" content="A floating co-pilot for meetings, interviews and calls on your Mac. Runs on your device with your own Claude API key.">
+<style>
+  :root { --bg:#f6f4ef; --card:#ffffff; --text:#1b1d1c; --muted:#5f6763; --line:#e3dfd6; --accent:#1f8a57; --accent-ink:#ffffff; --soft:#e9f5ee; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#111514; --card:#191e1c; --text:#eef2ef; --muted:#9aa5a0; --line:#28302d; --accent:#5fd699; --accent-ink:#0c1a13; --soft:#16261e; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 56px 20px 72px; }
+  .tag { display:inline-block; background:var(--soft); color:var(--accent); font-size:13px; font-weight:600; padding:4px 12px; border-radius:20px; }
+  h1 { font-size: clamp(34px, 7vw, 52px); line-height:1.08; letter-spacing:-0.02em; margin:18px 0 14px; text-wrap: balance; }
+  .lede { font-size:19px; color:var(--muted); max-width: 58ch; margin:0 0 28px; }
+  .btn { display:inline-flex; align-items:center; gap:10px; background:var(--accent); color:var(--accent-ink); text-decoration:none; font-weight:650; font-size:17px; padding:14px 24px; border-radius:12px; }
+  .btn:hover { filter:brightness(1.07); }
+  .req { color:var(--muted); font-size:14px; margin-top:12px; }
+  h2 { font-size:22px; letter-spacing:-0.01em; margin:52px 0 14px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 18px; }
+  .card b { display:block; margin-bottom:4px; }
+  .card span { color:var(--muted); font-size:14.5px; }
+  ol { padding-left:22px; margin:0; } li { margin:8px 0; }
+  code { background:var(--soft); padding:2px 7px; border-radius:6px; font-size:14px; }
+  footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <span class="tag">macOS · Apple Silicon</span>
+  <h1>Sunday Meeting</h1>
+  <p class="lede">A small floating window that listens to your meeting, shows a live transcript of both sides, and tells you what to say when you ask.</p>
+  <a class="btn" href="https://github.com/adeebkm/sunday-meeting-download/releases/latest/download/Sunday-Meeting-0.1.0-arm64.dmg">Download for Mac</a>
+  <p class="req">Version 0.1.0 · about 205 MB · needs a Mac with Apple Silicon and your own Claude API key</p>
+
+  <h2>What it does</h2>
+  <div class="grid">
+    <div class="card"><b>Hears both sides</b><span>Your microphone and the call audio are transcribed on your Mac, labelled You and Them.</span></div>
+    <div class="card"><b>What to say</b><span>Press the green arrow for a reply in your voice. Make it shorter, longer, or try a different example.</span></div>
+    <div class="card"><b>Ask anything</b><span>Type a question about the conversation, ask follow-ups, or get a summary with action items.</span></div>
+    <div class="card"><b>Modes</b><span>Starts with modes for meetings, interviews, sales calls and classes. Add your own notes and documents.</span></div>
+    <div class="card"><b>Private mode</b><span>Hide the window from screen sharing and recordings with one click.</span></div>
+    <div class="card"><b>Meeting history</b><span>Past meetings are saved with a transcript and summary you can search and ask about.</span></div>
+  </div>
+
+  <h2>Install</h2>
+  <ol>
+    <li>Open the downloaded file and drag <b>Sunday Meeting</b> into Applications.</li>
+    <li>Open it. This is an independent app that Apple has not reviewed, so macOS will block it the first time. Go to <b>System Settings → Privacy &amp; Security</b>, scroll down, and click <b>Open Anyway</b>.</li>
+    <li>Paste your Claude API key on the welcome screen. You can create one at <a href="https://console.anthropic.com/">console.anthropic.com</a>.</li>
+    <li>Press <b>Start</b> and allow Microphone and Screen &amp; System Audio Recording when macOS asks. Quit and reopen the app once after allowing.</li>
+  </ol>
+
+  <h2>Your data stays on your Mac</h2>
+  <div class="grid">
+    <div class="card"><b>Stored locally</b><span>Your API key, modes, documents and meeting history are saved only on your device.</span></div>
+    <div class="card"><b>Transcribed locally</b><span>Audio never leaves your Mac. Speech is turned into text on-device.</span></div>
+    <div class="card"><b>What is sent</b><span>Only transcript text and your mode notes go to the Claude API, using your own key, when you ask for something.</span></div>
+  </div>
+
+  <footer>Made by Adeeb. Sunday Meeting is an independent project. Tell the people you are meeting with if you record or transcribe them; the rules on this differ by place.</footer>
+</main>
+</body>
+</html>
