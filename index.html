@@ -11,6 +11,9 @@
   * { box-sizing: border-box; }
   body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif; }
   main { max-width: 760px; margin: 0 auto; padding: 56px 20px 72px; }
+  .by { margin:0 0 14px; font-size:15px; color:var(--muted); }
+  .by b { color:var(--text); }
+  .why { max-width:58ch; margin:0 0 26px; padding:12px 16px; border-left:3px solid var(--accent); background:var(--soft); border-radius:0 10px 10px 0; font-size:15.5px; }
   .tag { display:inline-block; background:var(--soft); color:var(--accent); font-size:13px; font-weight:600; padding:4px 12px; border-radius:20px; }
   h1 { font-size: clamp(34px, 7vw, 52px); line-height:1.08; letter-spacing:-0.02em; margin:18px 0 14px; text-wrap: balance; }
   .lede { font-size:19px; color:var(--muted); max-width: 58ch; margin:0 0 28px; }
@@ -30,9 +33,11 @@
 </head>
 <body>
 <main>
+  <p class="by">Made by <b>Adeeb</b></p>
   <span class="tag">macOS · Apple Silicon</span>
   <h1>Sunday Meeting</h1>
   <p class="lede">A small floating window that listens to your meeting, shows a live transcript of both sides, and tells you what to say when you ask.</p>
+  <p class="why">Adeeb built Sunday Meeting and made it free for students who need a hand in meetings, and to help them prepare for vivas and interviews.</p>
   <a class="btn" href="https://github.com/adeebkm/sunday-meeting-download/releases/latest/download/Sunday-Meeting-0.1.0-arm64.dmg">Download for Mac</a>
   <p class="req">Version 0.1.0 · about 205 MB · needs a Mac with Apple Silicon and your own Claude API key</p>
 
