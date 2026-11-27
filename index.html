@@ -38,9 +38,9 @@
   <h1>Sunday Meeting</h1>
   <p class="lede">A small floating window that listens to your meeting, shows a live transcript of both sides, and tells you what to say when you ask.</p>
   <p class="why">Adeeb built Sunday Meeting and made it free for students who need a hand in meetings, and to help them prepare for vivas and interviews.</p>
-  <a class="btn" href="https://github.com/adeebkm/sunday-meeting-download/releases/latest/download/Sunday-Meeting-0.4.0-arm64.dmg">Download for Mac</a>
-  <p class="req"><b>The download is password protected for now.</b> Ask Adeeb for the password; macOS asks for it when you open the file.</p>
-  <p class="req">Version 0.4.0 · about 220 MB · password needed to open · needs a Mac with Apple Silicon and your own Claude API key</p>
+  <a class="btn" href="https://github.com/adeebkm/sunday-meeting-download/releases/latest/download/Sunday-Meeting-0.5.0-arm64.dmg">Download for Mac</a>
+  <p class="req"><b>You need two things from Adeeb:</b> the download password, which macOS asks for when you open the file, and your own personal activation code, which the app asks for the first time you open it.</p>
+  <p class="req">Version 0.5.0 · about 220 MB · password and personal code needed · needs a Mac with Apple Silicon and your own Claude API key</p>
 
   <h2>What it does</h2>
   <div class="grid">
@@ -57,17 +57,19 @@
   <ul>
     <li><b>A Mac with Apple Silicon.</b> Click the Apple menu, then <b>About This Mac</b>. If the Chip line says Apple M1, M2, M3 or later, it will work. Intel Macs are not supported.</li>
     <li><b>A Claude API key with credits.</b> Go to <a href="https://console.anthropic.com/">console.anthropic.com</a>, sign in, add a few dollars of credit under Billing, then open <b>API Keys</b> and click <b>Create Key</b>. Copy the key; you will paste it into the app once.</li>
+    <li><b>A personal activation code.</b> Ask Adeeb for one. It looks like XXXX-XXXX-XXXX, is yours alone, and works on up to two of your own computers. Please do not share it.</li>
     <li><b>Headphones, if you can.</b> With speakers on, your microphone also hears the other person. The app filters that out, but headphones give the cleanest transcript.</li>
   </ul>
 
   <h2>Install, step by step</h2>
   <ol>
-    <li><b>Download.</b> Click <b>Download for Mac</b> above. The file <b>Sunday-Meeting-0.4.0-arm64.dmg</b> lands in your Downloads folder.</li>
+    <li><b>Download.</b> Click <b>Download for Mac</b> above. The file <b>Sunday-Meeting-0.5.0-arm64.dmg</b> lands in your Downloads folder.</li>
     <li><b>Enter the password.</b> Double-click the downloaded file. macOS asks for a password: type the one Adeeb gave you.</li>
     <li><b>Copy it to Applications.</b> A window opens showing Sunday Meeting and an Applications folder. Drag <b>Sunday Meeting</b> onto <b>Applications</b>. Then eject the Sunday Meeting disk in Finder.</li>
     <li><b>Open it once.</b> Open your Applications folder and double-click <b>Sunday Meeting</b>. macOS shows "Sunday Meeting Not Opened". This is expected: it is an independent app that Apple has not reviewed. Click <b>Done</b>.</li>
     <li><b>Allow it.</b> Open <b>System Settings</b>, go to <b>Privacy &amp; Security</b> and scroll down to the Security section. Next to "Sunday Meeting was blocked", click <b>Open Anyway</b>, confirm with your password or Touch ID, then click <b>Open Anyway</b> again. You only do this once.</li>
     <li><b>Add your key.</b> On the welcome screen, paste your Claude API key and save. It is stored only on your Mac.</li>
+    <li><b>Activate.</b> In the floating bar, type your personal code under <b>Activate Sunday Meeting</b>, tick <b>I agree to the terms of use</b> (click <b>Read them</b> to see them) and click <b>Activate</b>. You need to be online for this step. After that the app works offline for up to five days at a time and renews itself whenever it is online.</li>
     <li><b>Find the window.</b> Sunday Meeting is a small bar floating near the top of your screen. It has no Dock icon. Press <b>Cmd + \</b> to hide or show it, and use <b>Menu → Quit Sunday Meeting</b> to quit. If anything is missing, a <b>Setup</b> checklist appears in the window with a button for each fix.</li>
     <li><b>Allow the microphone.</b> Press <b>Start</b>. When macOS asks for the microphone, click <b>Allow</b>.</li>
     <li><b>Allow call audio.</b> macOS then asks for Screen &amp; System Audio Recording, which is how the app hears the other person. Click <b>Open System Settings</b> and switch <b>Sunday Meeting</b> on. Quit the app from <b>Menu</b> and open it again.</li>
@@ -83,7 +85,7 @@
   </ol>
 
   <h2>Updating</h2>
-  <p>Download the new version, drag it to Applications and choose <b>Replace</b>. Your key, modes and history are kept. If the other person stops being heard after an update, go to System Settings → Privacy &amp; Security → Screen &amp; System Audio Recording, switch Sunday Meeting off and on again, then reopen the app.</p>
+  <p>Download the new version, drag it to Applications and choose <b>Replace</b>. Your key, modes and history are kept. Coming from 0.4.0 or earlier, the app will ask for your personal code once. If the other person stops being heard after an update, go to System Settings → Privacy &amp; Security → Screen &amp; System Audio Recording, switch Sunday Meeting off and on again, then reopen the app.</p>
 
   <h2>Your data stays on your Mac</h2>
   <div class="grid">
@@ -91,6 +93,8 @@
     <div class="card"><b>Transcribed locally</b><span>Audio never leaves your Mac. Speech is turned into text on-device.</span></div>
     <div class="card"><b>What is sent</b><span>Only transcript text and your mode notes go to the Claude API, using your own key, when you ask for something.</span></div>
   </div>
+
+  <p class="req"><b>Activation check.</b> To confirm your code, the app sends the code and a scrambled ID of your computer to the Sunday Meeting licence server. No audio, transcripts, notes or API keys are sent there. To move to a new computer, open <b>Menu → Modes and settings → Settings</b> and click <b>Remove from this computer</b> on the old one first.</p>
 
   <footer>Made by Adeeb. Sunday Meeting is an independent project. Tell the people you are meeting with if you record or transcribe them; the rules on this differ by place.</footer>
 </main>
