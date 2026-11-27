@@ -38,13 +38,14 @@
   <h1>Sunday Meeting</h1>
   <p class="lede">A small floating window that listens to your meeting, shows a live transcript of both sides, and tells you what to say when you ask.</p>
   <p class="why">Adeeb built Sunday Meeting and made it free for students who need a hand in meetings, and to help them prepare for vivas and interviews.</p>
-  <a class="btn" href="https://github.com/adeebkm/sunday-meeting-download/releases/latest/download/Sunday-Meeting-0.3.0-arm64.dmg">Download for Mac</a>
-  <p class="req">Version 0.3.0 · about 205 MB · needs a Mac with Apple Silicon and your own Claude API key</p>
+  <a class="btn" href="https://github.com/adeebkm/sunday-meeting-download/releases/latest/download/Sunday-Meeting-0.4.0-arm64.dmg">Download for Mac</a>
+  <p class="req"><b>The download is password protected for now.</b> Ask Adeeb for the password; macOS asks for it when you open the file.</p>
+  <p class="req">Version 0.4.0 · about 220 MB · password needed to open · needs a Mac with Apple Silicon and your own Claude API key</p>
 
   <h2>What it does</h2>
   <div class="grid">
     <div class="card"><b>Hears both sides</b><span>Your microphone and the call audio are transcribed on your Mac, labelled You and Them.</span></div>
-    <div class="card"><b>What to say</b><span>Press the green arrow for a reply in your voice. Make it shorter, longer, or try a different example.</span></div>
+    <div class="card"><b>What to say</b><span>Press Say, or Control+Return from any app, for a reply in your voice on a large cue card that follows along as you speak.</span></div>
     <div class="card"><b>Ask anything</b><span>Type a question about the conversation, ask follow-ups, or get a summary with action items.</span></div>
     <div class="card"><b>Modes</b><span>Starts with modes for meetings, interviews, vivas, sales calls and classes. Add your own notes and documents.</span></div>
     <div class="card"><b>Screenshot button</b><span>Press the camera to send what is on your screen with the question, for slides, diagrams, code and problems.</span></div>
@@ -61,23 +62,24 @@
 
   <h2>Install, step by step</h2>
   <ol>
-    <li><b>Download.</b> Click <b>Download for Mac</b> above. The file <b>Sunday-Meeting-0.3.0-arm64.dmg</b> lands in your Downloads folder.</li>
-    <li><b>Copy it to Applications.</b> Double-click the downloaded file. A window opens showing Sunday Meeting and an Applications folder. Drag <b>Sunday Meeting</b> onto <b>Applications</b>. Then eject the Sunday Meeting disk in Finder.</li>
+    <li><b>Download.</b> Click <b>Download for Mac</b> above. The file <b>Sunday-Meeting-0.4.0-arm64.dmg</b> lands in your Downloads folder.</li>
+    <li><b>Enter the password.</b> Double-click the downloaded file. macOS asks for a password: type the one Adeeb gave you.</li>
+    <li><b>Copy it to Applications.</b> A window opens showing Sunday Meeting and an Applications folder. Drag <b>Sunday Meeting</b> onto <b>Applications</b>. Then eject the Sunday Meeting disk in Finder.</li>
     <li><b>Open it once.</b> Open your Applications folder and double-click <b>Sunday Meeting</b>. macOS shows "Sunday Meeting Not Opened". This is expected: it is an independent app that Apple has not reviewed. Click <b>Done</b>.</li>
     <li><b>Allow it.</b> Open <b>System Settings</b>, go to <b>Privacy &amp; Security</b> and scroll down to the Security section. Next to "Sunday Meeting was blocked", click <b>Open Anyway</b>, confirm with your password or Touch ID, then click <b>Open Anyway</b> again. You only do this once.</li>
     <li><b>Add your key.</b> On the welcome screen, paste your Claude API key and save. It is stored only on your Mac.</li>
-    <li><b>Find the window.</b> Sunday Meeting is a small bar floating near the top of your screen. It has no Dock icon. Press <b>Cmd + \</b> to hide or show it, and use the <b>✕</b> on the bar to quit.</li>
+    <li><b>Find the window.</b> Sunday Meeting is a small bar floating near the top of your screen. It has no Dock icon. Press <b>Cmd + \</b> to hide or show it, and use <b>Menu → Quit Sunday Meeting</b> to quit. If anything is missing, a <b>Setup</b> checklist appears in the window with a button for each fix.</li>
     <li><b>Allow the microphone.</b> Press <b>Start</b>. When macOS asks for the microphone, click <b>Allow</b>.</li>
-    <li><b>Allow call audio.</b> macOS then asks for Screen &amp; System Audio Recording, which is how the app hears the other person. Click <b>Open System Settings</b> and switch <b>Sunday Meeting</b> on. Quit the app with the ✕ and open it again.</li>
-    <li><b>Check both sides are heard.</b> Press <b>Start</b> again. The two chips under the buttons should read <b>You · mic</b> and <b>Them · call audio</b> with a green dot. If Them says "not captured", repeat step 8.</li>
+    <li><b>Allow call audio.</b> macOS then asks for Screen &amp; System Audio Recording, which is how the app hears the other person. Click <b>Open System Settings</b> and switch <b>Sunday Meeting</b> on. Quit the app from <b>Menu</b> and open it again.</li>
+    <li><b>Check both sides are heard.</b> Press <b>Start</b> again. The two chips under the buttons should read <b>You · mic</b> and <b>Them · call audio</b> with a lit dot. If one is red, click it and follow the Setup checklist.</li>
   </ol>
 
   <h2>Using it</h2>
   <ol>
     <li><b>Pick a mode</b> from the dropdown: General meeting, Job interview, Viva, Sales or client call, or Lecture or class.</li>
-    <li><b>Make it yours.</b> Click the gear, open the mode, and replace the "About me (edit this)" line with your own details, or attach your resume, report or slides. Keep documents short; everything in a mode is sent with each request and uses your credits.</li>
+    <li><b>Make it yours.</b> Open <b>Menu → Modes and settings</b>, pick the mode, and replace the "About me (edit this)" line with your own details, or attach your resume, report or slides. Keep documents short; everything in a mode is sent with each request and uses your credits.</li>
     <li><b>Press Start</b> when the meeting begins and <b>End</b> when it finishes. The meeting is saved to History on your Mac.</li>
-    <li><b>Green arrow</b>: what to say right now. <b>Camera</b>: the same, plus a screenshot of your screen. <b>Type a question</b> and press Return to ask anything about the conversation.</li>
+    <li><b>Say</b> (or <b>Control + Return</b> from any app): what to say right now. <b>Camera</b> (or <b>Control + Shift + Return</b>): the same, plus a screenshot of your screen. <b>Cmd + Shift + \</b> switches to a compact window that shows only what to say. <b>Type a question</b> and press Return to ask anything about the conversation.</li>
   </ol>
 
   <h2>Updating</h2>
