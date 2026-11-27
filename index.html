@@ -25,7 +25,7 @@
   .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 18px; }
   .card b { display:block; margin-bottom:4px; }
   .card span { color:var(--muted); font-size:14.5px; }
-  ol { padding-left:22px; margin:0; } li { margin:8px 0; }
+  ol, ul { padding-left:22px; margin:0; } li { margin:8px 0; }
   code { background:var(--soft); padding:2px 7px; border-radius:6px; font-size:14px; }
   footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
   a { color:var(--accent); }
@@ -38,26 +38,50 @@
   <h1>Sunday Meeting</h1>
   <p class="lede">A small floating window that listens to your meeting, shows a live transcript of both sides, and tells you what to say when you ask.</p>
   <p class="why">Adeeb built Sunday Meeting and made it free for students who need a hand in meetings, and to help them prepare for vivas and interviews.</p>
-  <a class="btn" href="https://github.com/adeebkm/sunday-meeting-download/releases/latest/download/Sunday-Meeting-0.2.0-arm64.dmg">Download for Mac</a>
-  <p class="req">Version 0.2.0 · about 205 MB · needs a Mac with Apple Silicon and your own Claude API key</p>
+  <a class="btn" href="https://github.com/adeebkm/sunday-meeting-download/releases/latest/download/Sunday-Meeting-0.3.0-arm64.dmg">Download for Mac</a>
+  <p class="req">Version 0.3.0 · about 205 MB · needs a Mac with Apple Silicon and your own Claude API key</p>
 
   <h2>What it does</h2>
   <div class="grid">
     <div class="card"><b>Hears both sides</b><span>Your microphone and the call audio are transcribed on your Mac, labelled You and Them.</span></div>
     <div class="card"><b>What to say</b><span>Press the green arrow for a reply in your voice. Make it shorter, longer, or try a different example.</span></div>
     <div class="card"><b>Ask anything</b><span>Type a question about the conversation, ask follow-ups, or get a summary with action items.</span></div>
-    <div class="card"><b>Modes</b><span>Starts with modes for meetings, interviews, sales calls and classes. Add your own notes and documents.</span></div>
+    <div class="card"><b>Modes</b><span>Starts with modes for meetings, interviews, vivas, sales calls and classes. Add your own notes and documents.</span></div>
+    <div class="card"><b>Screenshot button</b><span>Press the camera to send what is on your screen with the question, for slides, diagrams, code and problems.</span></div>
     <div class="card"><b>Private mode</b><span>Hide the window from screen sharing and recordings with one click.</span></div>
     <div class="card"><b>Meeting history</b><span>Past meetings are saved with a transcript and summary you can search and ask about.</span></div>
   </div>
 
-  <h2>Install</h2>
+  <h2>Before you start</h2>
+  <ul>
+    <li><b>A Mac with Apple Silicon.</b> Click the Apple menu, then <b>About This Mac</b>. If the Chip line says Apple M1, M2, M3 or later, it will work. Intel Macs are not supported.</li>
+    <li><b>A Claude API key with credits.</b> Go to <a href="https://console.anthropic.com/">console.anthropic.com</a>, sign in, add a few dollars of credit under Billing, then open <b>API Keys</b> and click <b>Create Key</b>. Copy the key; you will paste it into the app once.</li>
+    <li><b>Headphones, if you can.</b> With speakers on, your microphone also hears the other person. The app filters that out, but headphones give the cleanest transcript.</li>
+  </ul>
+
+  <h2>Install, step by step</h2>
   <ol>
-    <li>Open the downloaded file and drag <b>Sunday Meeting</b> into Applications.</li>
-    <li>Open it. This is an independent app that Apple has not reviewed, so macOS will block it the first time. Go to <b>System Settings → Privacy &amp; Security</b>, scroll down, and click <b>Open Anyway</b>.</li>
-    <li>Paste your Claude API key on the welcome screen. You can create one at <a href="https://console.anthropic.com/">console.anthropic.com</a>.</li>
-    <li>Press <b>Start</b> and allow Microphone and Screen &amp; System Audio Recording when macOS asks. Quit and reopen the app once after allowing.</li>
+    <li><b>Download.</b> Click <b>Download for Mac</b> above. The file <b>Sunday-Meeting-0.3.0-arm64.dmg</b> lands in your Downloads folder.</li>
+    <li><b>Copy it to Applications.</b> Double-click the downloaded file. A window opens showing Sunday Meeting and an Applications folder. Drag <b>Sunday Meeting</b> onto <b>Applications</b>. Then eject the Sunday Meeting disk in Finder.</li>
+    <li><b>Open it once.</b> Open your Applications folder and double-click <b>Sunday Meeting</b>. macOS shows "Sunday Meeting Not Opened". This is expected: it is an independent app that Apple has not reviewed. Click <b>Done</b>.</li>
+    <li><b>Allow it.</b> Open <b>System Settings</b>, go to <b>Privacy &amp; Security</b> and scroll down to the Security section. Next to "Sunday Meeting was blocked", click <b>Open Anyway</b>, confirm with your password or Touch ID, then click <b>Open Anyway</b> again. You only do this once.</li>
+    <li><b>Add your key.</b> On the welcome screen, paste your Claude API key and save. It is stored only on your Mac.</li>
+    <li><b>Find the window.</b> Sunday Meeting is a small bar floating near the top of your screen. It has no Dock icon. Press <b>Cmd + \</b> to hide or show it, and use the <b>✕</b> on the bar to quit.</li>
+    <li><b>Allow the microphone.</b> Press <b>Start</b>. When macOS asks for the microphone, click <b>Allow</b>.</li>
+    <li><b>Allow call audio.</b> macOS then asks for Screen &amp; System Audio Recording, which is how the app hears the other person. Click <b>Open System Settings</b> and switch <b>Sunday Meeting</b> on. Quit the app with the ✕ and open it again.</li>
+    <li><b>Check both sides are heard.</b> Press <b>Start</b> again. The two chips under the buttons should read <b>You · mic</b> and <b>Them · call audio</b> with a green dot. If Them says "not captured", repeat step 8.</li>
   </ol>
+
+  <h2>Using it</h2>
+  <ol>
+    <li><b>Pick a mode</b> from the dropdown: General meeting, Job interview, Viva, Sales or client call, or Lecture or class.</li>
+    <li><b>Make it yours.</b> Click the gear, open the mode, and replace the "About me (edit this)" line with your own details, or attach your resume, report or slides. Keep documents short; everything in a mode is sent with each request and uses your credits.</li>
+    <li><b>Press Start</b> when the meeting begins and <b>End</b> when it finishes. The meeting is saved to History on your Mac.</li>
+    <li><b>Green arrow</b>: what to say right now. <b>Camera</b>: the same, plus a screenshot of your screen. <b>Type a question</b> and press Return to ask anything about the conversation.</li>
+  </ol>
+
+  <h2>Updating</h2>
+  <p>Download the new version, drag it to Applications and choose <b>Replace</b>. Your key, modes and history are kept. If the other person stops being heard after an update, go to System Settings → Privacy &amp; Security → Screen &amp; System Audio Recording, switch Sunday Meeting off and on again, then reopen the app.</p>
 
   <h2>Your data stays on your Mac</h2>
   <div class="grid">
